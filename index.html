@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leave Early</title>
+<meta name="description" content="An Android app that warns you to set off sooner when traffic would make you late. In early testing, not on Google Play yet.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F5F0">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141311">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <svg class="mark" viewBox="30 30 54 48" aria-hidden="true"><path d="M64.86 38.68A20 20 0 1 0 64.86 69.32M52 54V40M52 54H78M69 45L78 54L69 63"/></svg>
+  <span>Leave Early</span>
+</header>
+
+<main>
+  <section class="opening">
+    <h1>A warning to set off sooner, when traffic would make you late.</h1>
+
+    <figure class="warning" aria-labelledby="warning-note">
+      <p class="leave">Leave by <span class="nowrap">17:00</span></p>
+      <p class="delay">Traffic +20 min</p>
+
+      <div class="rule" role="img" aria-label="On a usual day you leave at 17:20. With 20 minutes of traffic you leave at 17:00. Either way you arrive by 18:00.">
+        <div class="track today"><span class="extra"></span><span class="base"></span></div>
+        <div class="track usual"><span class="base"></span></div>
+        <div class="stops" aria-hidden="true">
+          <span class="stop soonest">17:00</span>
+          <span class="stop was">17:20<small>usual</small></span>
+          <span class="stop end">18:00<small>arrive</small></span>
+        </div>
+      </div>
+
+      <figcaption id="warning-note">A sample warning. The times are made up.</figcaption>
+    </figure>
+
+    <p class="status"><strong>Android only.</strong> In early testing and not on Google Play yet, so there is nothing to download.</p>
+  </section>
+
+  <section class="how">
+    <div class="how-grid">
+      <div>
+        <h2>It speaks up only when the delay passes a limit</h2>
+        <div class="steps">
+          <p><strong>It checks your route once a day</strong>, ahead of when you need to go, comparing live traffic with a trip on clear roads.</p>
+          <p><strong>If the delay reaches the limit, your phone pops up with a sound.</strong> The app doesn’t need to be open.</p>
+          <p><strong>The warning gives you a time, not a map.</strong> When to leave, when you’ll arrive, and when you’d usually set off.</p>
+          <p><strong>If the delay is under the limit, you hear nothing.</strong> The app keeps your last warning on one simple screen.</p>
+        </div>
+      </div>
+      <figure class="shot">
+        <picture>
+          <source srcset="img/app-warning-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="img/app-warning-light.png" width="720" height="907" loading="lazy"
+            alt="The Leave Early app. It says notifications are on, and shows a last warning: Sample: Traffic +20 min. Leave by 17:00 to arrive by 18:00. Usual leaving time 17:20.">
+        </picture>
+        <figcaption>The app on an Android emulator, showing a sample warning.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="limits">
+    <h2>Where it is now</h2>
+    <ul>
+      <li>Real traffic checks, and warnings on a real phone, are still being tested.</li>
+      <li>It’s set up for one route on one phone, and you can’t add your own yet.</li>
+      <li>It checks once a day, so it can’t warn about traffic that builds later.</li>
+      <li>There’s no account or sign-in, and no ads or payments in this version.</li>
+      <li>If a daily check fails, the app doesn’t tell you yet. So no warning doesn’t always mean clear roads.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leave Early is a working name.</p>
+</footer>
+</body>
+</html>
